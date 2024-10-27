@@ -1,4 +1,4 @@
-# Learning Path App
+# QoriYachay by SeedMinds
 
 ## Descripción
 

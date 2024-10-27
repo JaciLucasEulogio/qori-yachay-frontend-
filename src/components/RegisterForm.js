@@ -59,9 +59,9 @@ const RegisterForm = () => {
 ];
 
   const steps = [
-    { label: 'Personal Info', icon: <AccountCircle /> },
-    { label: 'Academic Profile', icon: <School /> },
-    { label: 'Areas of Interest', icon: <Interests /> },
+    { label: 'Información Personal', icon: <AccountCircle /> },
+    { label: 'Perfil Académico', icon: <School /> },
+    { label: 'Áreas de Interés', icon: <Interests /> },
   ];
 
   const handleInputChange = (section, field, value) => {
@@ -162,10 +162,10 @@ const RegisterForm = () => {
               variant="h4" 
               className="font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
             >
-              Student Registration
+              Registrate y Obtén tu Ruta
             </Typography>
             <Typography variant="body1" className="text-gray-700 mt-2">
-              Transform your ideas into exceptional learning experiences
+              Adecuamos la ruta de aprendizaje basado en tu nivel académico e intereses.
             </Typography>
           </div>
 
@@ -201,7 +201,7 @@ const RegisterForm = () => {
                     <div className="space-y-4">
                       <TextField
                         fullWidth
-                        label="First Name"
+                        label="Nombres"
                         variant="outlined"
                         value={formData.basicInfo.firstName}
                         onChange={(e) => handleInputChange('basicInfo', 'firstName', e.target.value)}
@@ -217,7 +217,7 @@ const RegisterForm = () => {
                       />
                       <TextField
                         fullWidth
-                        label="Last Name"
+                        label="Apellidos"
                         variant="outlined"
                         value={formData.basicInfo.lastName}
                         onChange={(e) => handleInputChange('basicInfo', 'lastName', e.target.value)}
@@ -256,7 +256,7 @@ const RegisterForm = () => {
                       <TextField
                         select
                         fullWidth
-                        label="Major"
+                        label="Carrera"
                         variant="outlined"
                         value={formData.academicProfile.major}
                         onChange={(e) => handleInputChange('academicProfile', 'major', e.target.value)}
@@ -279,7 +279,7 @@ const RegisterForm = () => {
                       <TextField
                         select
                         fullWidth
-                        label="Semester"
+                        label="Semestre"
                         variant="outlined"
                         value={formData.academicProfile.semester}
                         onChange={(e) => handleInputChange('academicProfile', 'semester', e.target.value)}
@@ -339,7 +339,7 @@ const RegisterForm = () => {
                       startIcon={<NavigateBefore />}
                       className="bg-gray-500 hover:bg-gray-600"
                     >
-                      Back
+                      Regresar
                     </Button>
                     <Button
                       variant="contained"
@@ -348,7 +348,7 @@ const RegisterForm = () => {
                       endIcon={step === 3 ? <CheckCircle /> : <NavigateNext />}
                       className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
                     >
-                      {step === 3 ? 'Submit' : 'Next'}
+                      {step === 3 ? 'Enviar' : 'Siguiente'}
                     </Button>
                   </div>
                 </form>

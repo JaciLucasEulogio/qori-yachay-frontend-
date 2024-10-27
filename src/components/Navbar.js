@@ -57,16 +57,6 @@ const NavButton = styled(Button)(({ theme, active }) => ({
   transition: 'all 0.3s ease-in-out',
 }));
 
-const LogoutButton = styled(Button)(({ theme }) => ({
-  background: 'linear-gradient(to right, #9333ea, #ec4899)',
-  color: '#fff',
-  padding: '8px 16px',
-  borderRadius: theme.shape.borderRadius,
-  '&:hover': {
-    opacity: 0.9,
-  },
-}));
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuAnchor, setMobileMenuAnchor] = useState(null);

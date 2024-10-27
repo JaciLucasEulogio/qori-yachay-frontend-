@@ -63,7 +63,7 @@ const Footer = () => {
               {['FAQ', 'Contacto', 'Ayuda', 'Términos'].map((item) => (
                 <li key={item}>
                   <a 
-                    href="#" 
+                    href="/" 
                     className="text-gray-300 hover:text-white hover:underline transition-colors duration-300"
                   >
                     {item}
@@ -99,7 +99,7 @@ const Footer = () => {
           ].map(({ Icon, label }) => (
             <a
               key={label}
-              href="#"
+              href="/"
               className="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300"
               aria-label={label}
             >
@@ -117,7 +117,7 @@ const Footer = () => {
               {['Privacidad', 'Términos', 'Cookies'].map((item) => (
                 <a
                   key={item}
-                  href="#"
+                  href="/"
                   className="hover:text-white transition-colors duration-300"
                 >
                   {item}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronUp, Facebook, Twitter, Instagram, Mail } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -24,11 +25,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Columna 1 - Logo y Descripción */}
           <div className="space-y-4">
+            <img src="https://i.ibb.co/mqxh7jg/Sin-t-tulo-7500-x-1563-px.png" alt="Logo" className="w-24 h-24" />
             <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Mi Aplicación
+              QoriYachay
             </h3>
             <p className="text-gray-300">
-              Transformando ideas en experiencias digitales excepcionales.
+              Transformamos la forma en la que aprendes.
             </p>
           </div>
 
@@ -36,13 +38,18 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
-              {['Inicio', 'Servicios', 'Productos', 'Sobre Nosotros'].map((item) => (
-                <li key={item}>
+              {[
+                { name: 'Inicio', url: '/' },
+                { name: 'Obtén tu ruta', url: '/form' },
+                { name: 'Resultados', url: '/results' },
+                { name: 'Sobre Nosotros', url: '/team' }
+              ].map(({ name, url }) => (
+                <li key={name}>
                   <a 
-                    href="#" 
+                    href={url} 
                     className="text-gray-300 hover:text-white hover:underline transition-colors duration-300"
                   >
-                    {item}
+                    {name}
                   </a>
                 </li>
               ))}
@@ -88,7 +95,7 @@ const Footer = () => {
             { Icon: Facebook, label: 'Facebook' },
             { Icon: Twitter, label: 'Twitter' },
             { Icon: Instagram, label: 'Instagram' },
-            { Icon: Mail, label: 'Email' }
+            { Icon: Linkedin, label: 'LinkedIn' }
           ].map(({ Icon, label }) => (
             <a
               key={label}
@@ -105,7 +112,7 @@ const Footer = () => {
         <div className="border-t border-purple-800/50 pt-8">
           {/* Copyright y Links Legales */}
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>© {new Date().getFullYear()} Mi Aplicación. Todos los derechos reservados.</p>
+            <p>© {new Date().getFullYear()} SeedMinds. Todos los derechos reservados.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               {['Privacidad', 'Términos', 'Cookies'].map((item) => (
                 <a

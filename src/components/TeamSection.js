@@ -10,7 +10,7 @@ const TeamSection = () => {
                 "Mantenimiento del Servidor"
             ],
             linkedin: "https://www.linkedin.com/in/anthony-luis-rosas-pisco-75b53b273/", // Asegúrate de que el enlace sea correcto
-            github: "javascript:void(0)"
+            github: "https://github.com/AnthonyGit1"
         },
         {
             avatar: "https://i.ibb.co/f9ZMQwm/joshhh2.jpg",
@@ -22,7 +22,7 @@ const TeamSection = () => {
                 "Crear guías y tutoriales para el usuario"
             ],
             linkedin: "https://www.linkedin.com/in/joshelyn-riveros-pariona-380160145/",
-            github: "javascript:void(0)"
+            github: "https://github.com/joshRiveros"
         },
         {
             avatar: "https://i.ibb.co/c2xQxg7/img.png",

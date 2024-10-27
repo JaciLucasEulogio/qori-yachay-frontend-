@@ -7,6 +7,7 @@ import ResultsPage from './components/ResultsPage';
 import Layout from './components/Layout';
 import TeamSection from './components/TeamSection';
 import LandingPage from './components/LandingPage';
+import FeedbackForm from './components/FeedbackForm';
 
 const App = () => {
   return (

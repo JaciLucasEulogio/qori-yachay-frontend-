@@ -170,6 +170,9 @@ const Navbar = () => {
             <NavLink to="/" icon={Home}>Inicio</NavLink>
           </MenuItem>
           <MenuItem onClick={handleMobileMenuClose}>
+            <NavLink to="/form" icon={Home}>Óbtén tu ruta</NavLink>
+          </MenuItem>
+          <MenuItem onClick={handleMobileMenuClose}>
             <NavLink to="/results" icon={BarChart}>Resultados</NavLink>
           </MenuItem>
           <MenuItem onClick={handleMobileMenuClose}>

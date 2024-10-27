@@ -1,4 +1,6 @@
 export default function LandingPage() {
+    console.log('API URL:', process.env.REACT_APP_API_URL); // Debe mostrar el valor de la URL
+
     return (
       <div className="bg-transparent">
         <div className="relative isolate px-6 pt-4 pb-8 lg:px-8">

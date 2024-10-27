@@ -149,8 +149,9 @@ const RegisterForm = () => {
       }
     }
   };
-  
+
   return (
+    
     <div className="min-h-screen relative overflow-hidden ">
       
       <div className="z-10 container mx-auto px-4 pt-20 pb-8">

@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# Learning Path App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Available Scripts
+QoriYachay es una aplicación diseñada para ayudar a los usuarios a crear y seguir rutas de aprendizaje personalizadas en diversas áreas de conocimiento.
 
-In the project directory, you can run:
+## Características
 
-### `npm start`
+- Creación de rutas de aprendizaje personalizadas.
+- Seguimiento del progreso del usuario.
+- Recomendaciones de recursos educativos.
+- Interfaz amigable y fácil de usar.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instalación
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/tu-usuario/learning-path-app.git
+    ```
+2. Navega al directorio del proyecto:
+    ```bash
+    cd learning-path-app
+    ```
+3. Instala las dependencias:
+    ```bash
+    npm install
+    ```
 
-### `npm test`
+## Uso
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Inicia la aplicación:
+    ```bash
+    npm start
+    ```
+2. Abre tu navegador y navega a `http://localhost:3000`.
 
-### `npm run build`
+## Contribución
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Haz un fork del repositorio.
+2. Crea una nueva rama:
+    ```bash
+    git checkout -b feature/nueva-funcionalidad
+    ```
+3. Realiza tus cambios y haz commit:
+    ```bash
+    git commit -m "Añadir nueva funcionalidad"
+    ```
+4. Sube tus cambios:
+    ```bash
+    git push origin feature/nueva-funcionalidad
+    ```
+5. Abre un Pull Request.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Licencia
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
-### `npm run eject`
+## Contacto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para cualquier consulta o sugerencia, por favor contacta a [tu-email@dominio.com](mailto:tu-email@dominio.com).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Descripción 📚
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Learning Path App es una aplicación diseñada para ayudar a los usuarios a crear y seguir rutas de aprendizaje personalizadas en diversas áreas de conocimiento.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Características ✨
 
-## Learn More
+- 🛠️ **Creación de rutas de aprendizaje personalizadas.**
+- 📈 **Seguimiento del progreso del usuario.**
+- 📚 **Recomendaciones de recursos educativos.**
+- 🖥️ **Interfaz amigable y fácil de usar.**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Instalación 🛠️
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/tu-usuario/learning-path-app.git
+    ```
+2. Navega al directorio del proyecto:
+    ```bash
+    cd learning-path-app
+    ```
+3. Instala las dependencias:
+    ```bash
+    npm install
+    ```
 
-### Code Splitting
+## Uso 🚀
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Inicia la aplicación:
+    ```bash
+    npm start
+    ```
+2. Abre tu navegador y navega a `http://localhost:3000`.
 
-### Analyzing the Bundle Size
+## Contribución 🤝
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Haz un fork del repositorio.
+2. Crea una nueva rama:
+    ```bash
+    git checkout -b feature/nueva-funcionalidad
+    ```
+3. Realiza tus cambios y haz commit:
+    ```bash
+    git commit -m "Añadir nueva funcionalidad"
+    ```
+4. Sube tus cambios:
+    ```bash
+    git push origin feature/nueva-funcionalidad
+    ```
+5. Abre un Pull Request.
 
-### Making a Progressive Web App
+## Licencia 📄
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
-### Advanced Configuration
+## Contacto 📧
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Para cualquier consulta o sugerencia, por favor contacta a [tu-email@dominio.com](mailto:tu-email@dominio.com).
 
-### Deployment
+## Recursos Adicionales 📚
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Documentación Oficial](https://github.com/tu-usuario/learning-path-app/wiki)
+- [Reportar un Problema](https://github.com/tu-usuario/learning-path-app/issues)
+- [Discusión y Soporte](https://github.com/tu-usuario/learning-path-app/discussions)

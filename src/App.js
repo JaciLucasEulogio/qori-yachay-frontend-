@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { ThemeProvider, CssBaseline } from '@mui/material';
+import theme from './theme'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RegisterForm from './components/RegisterForm';
+import ResultsPage from './components/ResultsPage';
+import Layout from './components/Layout';
+import TeamSection from './components/TeamSection';
+import LandingPage from './components/LandingPage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/form" element={<RegisterForm />} />
+            <Route path="/results" element={<ResultsPage />} />
+            <Route path="/team" element={<TeamSection />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
+

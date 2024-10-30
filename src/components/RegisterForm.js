@@ -49,14 +49,67 @@ const RegisterForm = () => {
     'Ingeniería Industrial',
   ];
 
-  const interestOptions = [
-    'Programación',
-    'Inteligencia Artificial',
-    'Desarrollo Web',
-    'Bases de Datos',
-    'Cloud Computing',
-    'Ciberseguridad',
-];
+  // Mapping majors to their specific interests
+  const majorInterests = {
+    'Ingeniería de Software': [
+      "Desarrollo Web Frontend",
+      "Desarrollo Web Backend",
+      "Desarrollo Móvil",
+      "Inteligencia Artificial",
+      "Machine Learning",
+      "DevOps y CI/CD",
+      "Arquitectura de Software",
+      "Base de Datos",
+      "Cloud Computing",
+      "Testing y QA",
+      "UI/UX Design",
+      "Microservicios"
+    ],
+    'Ciencias de la Computación': [
+      "Algoritmos Avanzados",
+      "Estructuras de Datos",
+      "Computación Teórica",
+      "Machine Learning",
+      "Programación Competitiva",
+      "Computación Científica",
+      "Computación Paralela",
+      "Teoría de Autómatas",
+      "Procesamiento de Lenguaje Natural",
+      "Computación Gráfica",
+      "Optimización de Algoritmos",
+      "GPU Computing"
+    ],
+    'Ingeniería de Sistemas': [
+      "Cloud Computing",
+      "Ciberseguridad",
+      "Redes y Comunicaciones",
+      "DevOps",
+      "Arquitectura Cloud",
+      "Ethical Hacking",
+      "Virtualización",
+      "Infraestructura como Código",
+      "Monitoreo y Observabilidad",
+      "Redes Definidas por Software",
+      "IoT y Edge Computing",
+      "Sistemas Distribuidos"
+    ],
+    'Ingeniería Industrial': [
+      "Analytics Industrial",
+      "Automatización Industrial",
+      "Supply Chain Management",
+      "Lean Manufacturing",
+      "Gestión de Operaciones",
+      "Optimización de Procesos",
+      "Control de Calidad",
+      "Planificación de Producción",
+      "Logística 4.0",
+      "Sistemas SCADA",
+      "Robótica Industrial",
+      "Mantenimiento Predictivo"  
+    ],
+  };
+
+  const interestOptions = (formData.academicProfile.major) ? majorInterests[formData.academicProfile.major] : [];
 
   const steps = [
     { label: 'Información Personal', icon: <AccountCircle /> },
@@ -118,7 +171,6 @@ const RegisterForm = () => {
     if (step > 1) setStep(prev => prev - 1);
   };
 
-  // Rename the form submission function to handleSubmit
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateStep()) {
@@ -133,7 +185,6 @@ const RegisterForm = () => {
 
       try {
         console.log('Submitting form data:', apiData);
-        // Assume you have an API function imported called submitFormData
         const response = await submitFormData(apiData);
         navigate('/results', { state: { result: response } });
       } catch (error) {
@@ -151,12 +202,9 @@ const RegisterForm = () => {
   };
 
   return (
-    
-    <div className="min-h-screen relative overflow-hidden ">
-      
+    <div className="min-h-screen relative overflow-hidden">
       <div className="z-10 container mx-auto px-4 pt-20 pb-8">
         <div className="max-w-4xl mx-auto">
-          {/* Title section */}
           <div className="text-center mb-8">
             <Typography 
               variant="h4" 
@@ -169,7 +217,6 @@ const RegisterForm = () => {
             </Typography>
           </div>
 
-          {/* Stepper */}
           <Box className="mb-6">
             <Stepper activeStep={step - 1} alternativeLabel>
               {steps.map((stepItem, index) => (
@@ -192,7 +239,6 @@ const RegisterForm = () => {
             </Stepper>
           </Box>
 
-          {/* Form card */}
           <Fade in={true}>
             <Card className="bg-white/95 backdrop-blur-sm shadow-xl rounded-xl overflow-hidden border border-gray-200">
               <CardContent className="p-8">
@@ -276,10 +322,11 @@ const RegisterForm = () => {
                           </MenuItem>
                         ))}
                       </TextField>
+
                       <TextField
                         select
                         fullWidth
-                        label="Semestre"
+                        label="Ciclo"
                         variant="outlined"
                         value={formData.academicProfile.semester}
                         onChange={(e) => handleInputChange('academicProfile', 'semester', e.target.value)}
@@ -293,9 +340,9 @@ const RegisterForm = () => {
                           className: 'text-gray-700',
                         }}
                       >
-                        {[...Array(8)].map((_, i) => (
-                          <MenuItem key={i + 1} value={String(i + 1)}>
-                            Semester {i + 1}
+                        {Array.from({ length: 10 }, (_, i) => (
+                          <MenuItem key={i + 1} value={i + 1}>
+                            {i + 1}
                           </MenuItem>
                         ))}
                       </TextField>
@@ -304,52 +351,61 @@ const RegisterForm = () => {
 
                   {step === 3 && (
                     <div className="space-y-4">
-                      {errors.interests && (
-                        <Alert severity="error" className="mb-4 bg-red-50 border border-red-200 text-red-700">
-                          {errors.interests}
-                        </Alert>
-                      )}
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {interestOptions.map((interest) => (
-                          <Tooltip key={interest} title={formData.interests.includes(interest) ? "Unselect" : "Select"}>
+                      <Typography variant="h6" className="text-gray-800">
+                        Selecciona tus áreas de interés:
+                      </Typography>
+                      {interestOptions.length === 0 ? (
+                        <Typography variant="body1" className="text-gray-500">
+                          No hay áreas de interés disponibles para tu carrera seleccionada.
+                        </Typography>
+                      ) : (
+                        interestOptions.map((interest) => (
+                          <Tooltip title={formData.interests.includes(interest) ? 'Deseleccionar' : 'Seleccionar'} key={interest}>
                             <Button
                               variant={formData.interests.includes(interest) ? 'contained' : 'outlined'}
-                              color="primary"
+                              color={formData.interests.includes(interest) ? 'primary' : 'default'}
                               onClick={() => toggleInterest(interest)}
-                              className={`transition-all duration-300 ${
-                                formData.interests.includes(interest)
-                                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
-                                  : 'border-2 border-gray-300 hover:border-purple-500'
-                              }`}
+                              className="w-full"
                             >
                               {interest}
                             </Button>
                           </Tooltip>
-                        ))}
-                      </div>
+                        ))
+                      )}
+                      {errors.interests && (
+                        <Alert severity="warning">{errors.interests}</Alert>
+                      )}
                     </div>
                   )}
 
-                  <div className="flex justify-between pt-4">
+                  <div className="flex justify-between mt-6">
                     <Button
-                      variant="contained"
-                      color="secondary"
+                      variant="outlined"
+                      color="primary"
+                      startIcon={<NavigateBefore />}
                       onClick={handleBack}
                       disabled={step === 1}
-                      startIcon={<NavigateBefore />}
-                      className="bg-gray-500 hover:bg-gray-600"
                     >
-                      Regresar
+                      Atrás
                     </Button>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      onClick={step === 3 ? handleSubmit : handleNext}
-                      endIcon={step === 3 ? <CheckCircle /> : <NavigateNext />}
-                      className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
-                    >
-                      {step === 3 ? 'Enviar' : 'Siguiente'}
-                    </Button>
+                    {step < 3 ? (
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        endIcon={<NavigateNext />}
+                        onClick={handleNext}
+                      >
+                        Siguiente
+                      </Button>
+                    ) : (
+                      <Button
+                        type="submit"
+                        variant="contained"
+                        color="primary"
+                      >
+                        Registrar
+                      </Button>
+                    )}
                   </div>
                 </form>
               </CardContent>

@@ -2,7 +2,7 @@
 
 # 🌟 QoriYachay by SeedMinds
 
-![QoriYachay Logo](./public/logo.png)
+![QoriYachay Logo](https://github.com/AnthonyGit1/qoriyachay-backend/raw/main/assets/logo.png)
 
 *Tu camino hacia el conocimiento personalizado* ✨
 

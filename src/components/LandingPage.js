@@ -1,7 +1,7 @@
 export default function LandingPage() {
 
   return (
-    <section id="home" className="relative bg-white overflow-hidden">
+    <section id="home">
       <div className="bg-transparent">
         <div className="relative isolate px-6 pt-4 pb-8 lg:px-8">
           <div

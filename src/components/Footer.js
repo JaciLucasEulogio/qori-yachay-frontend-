@@ -7,6 +7,8 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const [isAvailable, setIsAvailable] = React.useState(false);
+
   return (
     <footer className="bg-gradient-to-r from-purple-900 to-blue-900 text-white">
       {/* Botón Scroll to Top */}
@@ -77,14 +79,23 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Newsletter</h4>
             <div className="flex flex-col space-y-3">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="Tu email"
                 className="bg-purple-800/50 border border-purple-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300"
+                disabled={!isAvailable} // Desactiva el input si no está disponible
               />
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg hover:opacity-90 transition-opacity duration-300">
+              <button
+                className={`bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg ${isAvailable ? "hover:opacity-90" : "opacity-50 cursor-not-allowed"} transition-opacity duration-300`}
+                disabled={!isAvailable} // Desactiva el botón si no está disponible
+              >
                 Suscribirse
               </button>
+              {!isAvailable && (
+                <p className="text-white-500 text-sm">
+                  Actualmente, esta opción no está disponible.
+                </p>
+              )}
             </div>
           </div>
         </div>

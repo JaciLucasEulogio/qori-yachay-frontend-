@@ -1,8 +1,7 @@
 export default function LandingPage() {
-  const API_URL = process.env.REACT_APP_API_URL;
-  console.log('API URL:', API_URL);
 
-    return (
+  return (
+    <section id="home" className="relative bg-white overflow-hidden">
       <div className="bg-transparent">
         <div className="relative isolate px-6 pt-4 pb-8 lg:px-8">
           <div
@@ -21,7 +20,7 @@ export default function LandingPage() {
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                 Conoce más sobre nuestra solución.{' '}
-                <a href="/form" className="font-semibold text-indigo-600">
+                <a href="*/form" className="font-semibold text-indigo-600">
                   <span aria-hidden="true" className="absolute inset-0" />
                   Pruébalo <span aria-hidden="true">&rarr;</span>
                 </a>
@@ -36,14 +35,45 @@ export default function LandingPage() {
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
-                    href="/form"
-                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  >
-                    Pruébalo
-                  </a>
-                <a href="https://github.com/JaciLucasEulogio/qori-yachay-frontend-" target="_blank" className="text-sm font-semibold leading-6 text-gray-900">
-                  Repositorio <span aria-hidden="true">→</span>
+                  href="https://github.com/JaciLucasEulogio/qori-yachay-frontend-"
+                  target="_blank"
+                  className="fixed bottom-6 right-6 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-4 text-xl font-bold text-white shadow-lg transition-transform animate-bounce z-50"
+                >
+                  Repositorio
+                  <span className="ml-2 text-2xl">⬆️</span>
                 </a>
+              </div>
+              <div className="flex justify-center mt-10">
+                <div className="relative w-full max-w-[560px] aspect-video">
+                  <h2 className="text-lg font-semibold mt-4">Tutorial: Cómo usar la plataforma</h2>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/Ja1wSVNb9h8?si=6QbdTOCuSrcbAJNV"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              </div>
+              <div className="flex justify-center mt-10">
+                <div className="relative w-full max-w-[560px] aspect-video">
+                  <h2 className="text-lg font-semibold mt-4">Demo de nuestra solución</h2>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/5RzgeGeTYtk?si=dLTLO2_MG5DqHadI"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -61,5 +91,6 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-    )
-  }
+    </section>
+  );
+}

@@ -47,6 +47,10 @@ const RegisterForm = () => {
     'Ciencias de la Computación',
     'Ingeniería de Sistemas',
     'Ingeniería Industrial',
+    'Ciencia de Datos',
+    'Ingeniería Mecatrónica',
+    'Ingeniería Biomédica',
+    'Ingeniería en Telecomunicaciones',
   ];
 
   // Mapping majors to their specific interests
@@ -106,6 +110,62 @@ const RegisterForm = () => {
       "Sistemas SCADA",
       "Robótica Industrial",
       "Mantenimiento Predictivo"  
+    ],
+    'Ciencia de Datos': [
+      "Analytics y Business Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Big Data",
+      "Visualización de Datos",
+      "Data Engineering",
+      "MLOps",
+      "Análisis Estadístico",
+      "Procesamiento de Lenguaje Natural",
+      "Computer Vision",
+      "Series Temporales",
+      "Data Mining"
+    ],
+    'Ingeniería Mecatrónica': [
+      "Robótica Industrial",
+      "Sistemas Embebidos",
+      "IoT Industrial",
+      "Control Automático",
+      "Automatización Industrial",
+      "Sistemas SCADA",
+      "PLC y PAC",
+      "Visión Artificial",
+      "Industria 4.0",
+      "Microcontroladores",
+      "Diseño Mecatrónico",
+      "Robótica Móvil"
+    ],
+    'Ingeniería Biomédica': [
+      "Imágenes Médicas",
+      "IA en Medicina",
+      "Instrumentación Biomédica",
+      "Procesamiento de Señales Biomédicas",
+      "Dispositivos Médicos",
+      "Biomecánica",
+      "Rehabilitación",
+      "IoT Médico",
+      "Telemedicina",
+      "Bioinformática",
+      "Ingeniería Clínica",
+      "Diseño de Prótesis"
+    ],
+    'Ingeniería en Telecomunicaciones': [
+      "Redes 5G/6G",
+      "Comunicaciones Satelitales",
+      "Fibra Óptica",
+      "Redes Móviles",
+      "Network Slicing",
+      "Sistemas de Transmisión",
+      "Redes Ópticas",
+      "Comunicaciones Inalámbricas",
+      "SDN/NFV",
+      "Seguridad en Telecomunicaciones",
+      "IoT y Comunicaciones",
+      "Procesamiento de Señales"
     ],
   };
 

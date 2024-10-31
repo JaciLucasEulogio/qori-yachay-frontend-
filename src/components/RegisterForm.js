@@ -340,7 +340,7 @@ const RegisterForm = () => {
                           className: 'text-gray-700',
                         }}
                       >
-                        {Array.from({ length: 10 }, (_, i) => (
+                        {Array.from({ length: 12 }, (_, i) => (
                           <MenuItem key={i + 1} value={i + 1}>
                             {i + 1}
                           </MenuItem>

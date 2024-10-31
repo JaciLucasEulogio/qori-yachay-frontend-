@@ -29,7 +29,6 @@ const ResultsPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [learningPath, setLearningPath] = useState(() => {
-    // Intenta obtener los resultados del localStorage
     const savedPath = localStorage.getItem('learningPath');
     return savedPath ? JSON.parse(savedPath) : location.state?.result;
   });
@@ -46,7 +45,6 @@ const ResultsPage = () => {
     }
   }, [learningPath, data, recommendation]);
 
-  // Almacenamos los resultados en localStorage
   useEffect(() => {
     if (learningPath) {
       localStorage.setItem('learningPath', JSON.stringify(learningPath));
@@ -76,14 +74,15 @@ const ResultsPage = () => {
     </Typography>
   );
 
-  const GradientButton = ({ onClick, children }) => (
+  const GradientButton = ({ onClick, children, disabled }) => (
     <Button
       variant="contained"
       onClick={onClick}
+      disabled={disabled}
       sx={{
-        background: 'linear-gradient(to right, #9333ea, #ec4899)',
+        background: disabled ? '#ccc' : 'linear-gradient(to right, #9333ea, #ec4899)',
         '&:hover': {
-          background: 'linear-gradient(to right, #7e22ce, #db2777)',
+          background: disabled ? '#ccc' : 'linear-gradient(to right, #7e22ce, #db2777)',
         },
         textTransform: 'none',
         borderRadius: '8px',
@@ -106,9 +105,8 @@ const ResultsPage = () => {
   );
 
   const handleGenerateNewPath = () => {
-    // Limpiar el localStorage al generar una nueva ruta
     localStorage.removeItem('learningPath');
-    navigate('/path-form'); // Navega a tu formulario de generación de rutas
+    navigate('/path-form');
   };
 
   return (
@@ -117,7 +115,7 @@ const ResultsPage = () => {
         Tu Ruta de Aprendizaje Personalizada
       </GradientTypography>
 
-      <Box display="flex" justifyContent="center" className="mb-8 mt-8"> {/* Add margin-bottom for spacing */}
+      <Box display="flex" justifyContent="center" className="mb-8 mt-8">
         <GradientButton onClick={handleGenerateNewPath} className="mt-4">
           Generar Nueva Ruta
         </GradientButton>
@@ -265,6 +263,7 @@ const ResultsPage = () => {
                                           color: '#7e22ce',
                                         },
                                       }}
+                                      disabled
                                     >
                                       Ir al Recurso
                                     </Button>
@@ -283,32 +282,55 @@ const ResultsPage = () => {
           )}
 
           {alternatives.length > 0 && (
-            <GradientCard>
+            <GradientCard className="mb-8">
               <CardContent>
                 <GradientTypography variant="h5" className="mb-4">
                   Rutas Alternativas
                 </GradientTypography>
-                
+                <Divider className="mb-4" />
                 <Grid container spacing={3}>
-                  {alternatives.map((alt) => (
-                    <Grid item xs={12} md={4} key={alt.path.nombre_ruta}>
+                  {alternatives.map((ruta) => (
+                    <Grid item xs={12} md={6} key={ruta.path._id}>
                       <GradientCard>
-                        <CardMedia
-                          component="img"
-                          height="140"
-                          image={`https://source.unsplash.com/random/200x200?${alt.path.nombre_ruta}`}
-                          alt={alt.path.nombre_ruta}
-                        />
                         <CardContent>
-                          <Typography variant="h6" className="font-bold text-purple-800 mb-2">
-                            {alt.path.nombre_ruta}
-                          </Typography>
+                          <Box className="flex items-center justify-between mb-4">
+                            <Typography variant="h6" className="font-bold text-purple-800">
+                              {ruta.path.nombre_ruta}
+                            </Typography>
+                            <Chip
+                              label={`${(ruta.confidence * 100).toFixed(0)}% Match`}
+                              color="success"
+                              icon={<StarIcon />}
+                              className="bg-gradient-to-r from-green-500 to-emerald-500 text-white"
+                            />
+                          </Box>
+
                           <Typography className="text-gray-600 mb-4">
-                            {alt.path.descripcion}
+                            {ruta.path.descripcion}
                           </Typography>
-                          <GradientButton onClick={() => navigate('/alternative', { state: { result: alt } })}>
-                            Explorar Ruta Alternativa
-                          </GradientButton>
+
+                          <Link
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="no-underline"
+                          >
+                            <Button
+                              variant="outlined"
+                              endIcon={<ArrowIcon />}
+                              sx={{
+                                borderColor: '#9333ea',
+                                color: '#9333ea',
+                                '&:hover': {
+                                  borderColor: '#7e22ce',
+                                  color: '#7e22ce',
+                                },
+                              }}
+                              disabled
+                            >
+                              Ver Ruta
+                            </Button>
+                          </Link>
                         </CardContent>
                       </GradientCard>
                     </Grid>
@@ -324,4 +346,3 @@ const ResultsPage = () => {
 };
 
 export default ResultsPage;
-

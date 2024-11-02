@@ -153,20 +153,6 @@ const RegisterForm = () => {
       "Ingeniería Clínica",
       "Diseño de Prótesis"
     ],
-    'Ingeniería en Telecomunicaciones': [
-      "Redes 5G/6G",
-      "Comunicaciones Satelitales",
-      "Fibra Óptica",
-      "Redes Móviles",
-      "Network Slicing",
-      "Sistemas de Transmisión",
-      "Redes Ópticas",
-      "Comunicaciones Inalámbricas",
-      "SDN/NFV",
-      "Seguridad en Telecomunicaciones",
-      "IoT y Comunicaciones",
-      "Procesamiento de Señales"
-    ],
   };
 
   const interestOptions = (formData.academicProfile.major) ? majorInterests[formData.academicProfile.major] : [];

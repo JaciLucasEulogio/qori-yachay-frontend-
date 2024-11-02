@@ -32,7 +32,7 @@ Qoriyachay es una aplicación web que revoluciona el aprendizaje a través de ru
 <div align="center">
 
 [![Ver Demo](https://img.shields.io/badge/Ver%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Ja1wSVNb9h8)
-[![Probar App](https://img.shields.io/badge/Probar%20App-6C47FF?style=for-the-badge&logo=railway&logoColor=white)](https://qoriyachay-production.up.railway.app)
+[![Probar App](https://img.shields.io/badge/Probar%20App-6C47FF?style=for-the-badge&logo=railway&logoColor=white)](https://qoriyachay.netlify.app)
 
 </div>
 
@@ -100,7 +100,7 @@ npm run preview
 
 ## 🔗 Enlaces Importantes
 
-- [💻 Aplicación en Vivo](https://qoriyachay-production.up.railway.app)
+- [💻 Aplicación en Vivo](https://qoriyachay.netlify.app)
 - [📚 Repositorio Backend](https://github.com/AnthonyGit1/qoriyachay-backend)
 - [📄 Documento Técnico](/docs/Documentación-Qoriyachay-Seedminds.pdf)
 - [🎥 Video de Presentación](https://www.youtube.com/watch?v=YSgRLvUidW8)

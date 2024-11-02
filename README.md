@@ -4,11 +4,14 @@
 
 ![Qoriyachay Logo](https://github.com/AnthonyGit1/qoriyachay-backend/raw/main/assets/logo.png)
 
-![React](https://img.shields.io/badge/React-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white)
+[![React](https://img.shields.io/badge/React-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)](https://reactjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Deployed on Railway](https://img.shields.io/badge/Deployed%20on-Railway-purple)](https://qoriyachay.up.railway.app/)
 
 *Sistema inteligente de rutas de aprendizaje personalizadas*
+
+[🚀 Acceder a la Aplicación](https://qoriyachay.netlify.app) | [📖 Ver Demo](https://youtu.be/Ja1wSVNb9h8) | [📚 Documentación](/docs/Documentación-Qoriyachay-Seedminds.pdf)
 
 </div>
 
@@ -25,6 +28,13 @@
 ## 🎯 Descripción General
 
 Qoriyachay es una aplicación web que revoluciona el aprendizaje a través de rutas personalizadas impulsadas por IA. La aplicación analiza el perfil académico del estudiante y genera recomendaciones precisas de rutas de aprendizaje en diversas carreras tecnológicas.
+
+<div align="center">
+
+[![Ver Demo](https://img.shields.io/badge/Ver%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Ja1wSVNb9h8)
+[![Probar App](https://img.shields.io/badge/Probar%20App-6C47FF?style=for-the-badge&logo=railway&logoColor=white)](https://qoriyachay-production.up.railway.app)
+
+</div>
 
 ## ✨ Características
 
@@ -45,12 +55,11 @@ Qoriyachay es una aplicación web que revoluciona el aprendizaje a través de ru
 
 ## 🛠️ Tecnologías
 
-- **Frontend**: React 18
-- **Styling**: TailwindCSS
-- **Build Tool**: Vite
+- **Frontend**: React 18 con Vite
+- **Styling**: TailwindCSS + shadcn/ui
 - **State Management**: React Context
-- **UI Components**: shadcn/ui
 - **Icons**: Lucide React
+- **Deployment**: Railway
 
 ## 📋 Requisitos Previos
 
@@ -91,8 +100,9 @@ npm run preview
 
 ## 🔗 Enlaces Importantes
 
+- [💻 Aplicación en Vivo](https://qoriyachay-production.up.railway.app)
 - [📚 Repositorio Backend](https://github.com/AnthonyGit1/qoriyachay-backend)
-- [📄 Documento Técnico](/docs/Documentación de Qoriyachay-Seedminds.pdf)
+- [📄 Documento Técnico](/docs/Documentación-Qoriyachay-Seedminds.pdf)
 - [🎥 Video de Presentación](https://www.youtube.com/watch?v=YSgRLvUidW8)
 - [🎬 Video Demo](https://youtu.be/Ja1wSVNb9h8)
 
@@ -104,16 +114,6 @@ npm run preview
 |:---:|:---:|:---:|
 | **Anthony Rosas** | **Jaci Lucas** | **Joshelyn Riveros** |
 | Backend Dev | Frontend Dev | UX and QA |
-
-</div>
-
-## 📱 Capturas de Pantalla
-
-<div align="center">
-
-| Registro | Rutas | Módulos |
-|:---:|:---:|:---:|
-| ![Registro](url-a-imagen-1) | ![Rutas](url-a-imagen-2) | ![Módulos](url-a-imagen-3) |
 
 </div>
 

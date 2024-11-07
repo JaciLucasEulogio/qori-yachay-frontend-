@@ -178,7 +178,7 @@ const ResultsPage = () => {
                     Ruta Principal Recomendada
                   </GradientTypography>
                   <Chip
-                    label={`${(recommendation.mainRecommendation.confidence * 100).toFixed(0)}% Match`}
+                    label={`${(recommendation.mainRecommendation.similarity * 100).toFixed(0)}% Match`}
                     color="success"
                     icon={<StarIcon />}
                     className="bg-gradient-to-r from-green-500 to-emerald-500 text-white"
@@ -298,7 +298,7 @@ const ResultsPage = () => {
                               {ruta.path.nombre_ruta}
                             </Typography>
                             <Chip
-                              label={`${(ruta.confidence * 100).toFixed(0)}% Match`}
+                              label={`${(ruta.similarity * 100).toFixed(0)}% Match`}
                               color="success"
                               icon={<StarIcon />}
                               className="bg-gradient-to-r from-green-500 to-emerald-500 text-white"

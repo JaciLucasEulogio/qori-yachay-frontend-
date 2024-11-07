@@ -106,7 +106,7 @@ const ResultsPage = () => {
 
   const handleGenerateNewPath = () => {
     localStorage.removeItem('learningPath');
-    navigate('/path-form');
+    navigate('/form');
   };
 
   return (

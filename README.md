@@ -1,58 +1,80 @@
+# Qoriyachay Frontend
+
 <div align="center">
 
-# 🌟 QoriYachay by SeedMinds
+![Qoriyachay Logo](https://github.com/AnthonyGit1/qoriyachay-backend/raw/main/assets/logo.png)
 
-![QoriYachay Logo](https://github.com/AnthonyGit1/qoriyachay-backend/raw/main/assets/logo.png)
+[![React](https://img.shields.io/badge/React-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)](https://reactjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Deployed on Railway](https://img.shields.io/badge/Deployed%20on-Railway-purple)](https://qoriyachay.up.railway.app/)
 
-*Tu camino hacia el conocimiento personalizado* ✨
+*Sistema inteligente de rutas de aprendizaje personalizadas*
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/seedminds/qoriyachay/issues)
+[🚀 Acceder a la Aplicación](https://qoriyachay.netlify.app) | [📖 Ver Demo](https://youtu.be/Ja1wSVNb9h8) | [📚 Documentación](/docs/Documentación-Qoriyachay-Seedminds.pdf)
 
 </div>
 
-## 👥 Nuestro Equipo
+## 📋 Índice
+- [Descripción General](#-descripción-general)
+- [Características](#-características)
+- [Tecnologías](#-tecnologías)
+- [Requisitos Previos](#-requisitos-previos)
+- [Instalación](#-instalación)
+- [Uso](#-uso)
+- [Enlaces Importantes](#-enlaces-importantes)
+- [Equipo](#-equipo)
+
+## 🎯 Descripción General
+
+Qoriyachay es una aplicación web que revoluciona el aprendizaje a través de rutas personalizadas impulsadas por IA. La aplicación analiza el perfil académico del estudiante y genera recomendaciones precisas de rutas de aprendizaje en diversas carreras tecnológicas.
 
 <div align="center">
 
-<div align="center">
-
-| <img src="https://i.ibb.co/1qQtV9j/anthony-1.jpg" width="150" height="150" style="border-radius: 50%; object-fit: cover;"> | <img src="https://i.ibb.co/c2xQxg7/img.png" width="150" height="150" style="border-radius: 50%; object-fit: cover;"> | <img src="https://i.ibb.co/f9ZMQwm/joshhh2.jpg" width="150" height="150" style="border-radius: 50%; object-fit: cover;"> |
-|:---:|:---:|:---:|
-| **Anthony Rosas** | **Jaci Lucas** | **Joshelyn Riveros** |
-| Backend Dev | Frontend Dev | UX and QA |
-</div>
-
-</div>
-
-## 🎯 Descripción
-
-QoriYachay es una aplicación innovadora diseñada para revolucionar la forma en que aprendemos. Facilita la creación y seguimiento de rutas de aprendizaje personalizadas en diversas áreas del conocimiento, adaptándose a las necesidades individuales de cada usuario.
-
-<div align="center">
-
-[![QoriYachay Demo Video](https://img.youtube.com/vi/5RzgeGeTYtk/maxresdefault.jpg)](https://youtu.be/5RzgeGeTYtk)
-
-*▶️ Click en la imagen para ver la demo*
+[![Ver Demo](https://img.shields.io/badge/Ver%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/Ja1wSVNb9h8)
+[![Probar App](https://img.shields.io/badge/Probar%20App-6C47FF?style=for-the-badge&logo=railway&logoColor=white)](https://qoriyachay.netlify.app)
 
 </div>
 
 ## ✨ Características
 
-- 🎓 **Rutas Personalizadas**: Crea y sigue caminos de aprendizaje adaptados a tu ritmo
-- 📊 **Seguimiento Inteligente**: Monitorea tu progreso con métricas detalladas
-- 🤖 **IA Recomendadora**: Obtén sugerencias de recursos educativos relevantes
-- 💻 **UX Intuitiva**: Interfaz moderna y fácil de usar
-- 📱 **Responsive**: Accede desde cualquier dispositivo
+- 🎓 **Rutas Personalizadas**
+  - Recomendaciones basadas en IA
+  - 8 carreras disponibles
+  - 24 rutas especializadas
+
+- 📊 **Interfaz Intuitiva**
+  - Diseño moderno y responsive
+  - Experiencia de usuario fluida
+  - Visualización clara de rutas
+
+- 🤖 **Integración con IA**
+  - Matching inteligente de perfiles
+  - Sistema de recomendación adaptativo
+  - Análisis de intereses
+
+## 🛠️ Tecnologías
+
+- **Frontend**: React 18 con Vite
+- **Styling**: TailwindCSS + shadcn/ui
+- **State Management**: React Context
+- **Icons**: Lucide React
+- **Deployment**: Railway
+
+## 📋 Requisitos Previos
+
+- Node.js >= 14.0.0
+- npm >= 6.14.0
+- Conexión a Internet
 
 ## 🚀 Instalación
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/seedminds/qoriyachay.git
+git clone https://github.com/seedminds/qoriyachay-frontend.git
 
-# Navegar al directorio
-cd qoriyachay
+# Entrar al directorio
+cd qoriyachay-frontend
 
 # Instalar dependencias
 npm install
@@ -60,56 +82,44 @@ npm install
 
 ## 📖 Uso
 
+1. Configurar variables de entorno:
 ```bash
-# Iniciar la aplicación
-npm start
-
-# Acceder a la interfaz
-Abre http://localhost:3000 en tu navegador
+# .env
+VITE_API_URL=http://localhost:3000/api
 ```
 
-## 🤝 Contribución
+2. Iniciar aplicación:
+```bash
+# Desarrollo
+npm run dev
 
-¡Nos encanta recibir contribuciones! Sigue estos pasos:
+# Producción
+npm run build
+npm run preview
+```
 
-1. 🍴 Fork el repositorio
-2. 🌿 Crea tu rama de características
-   ```bash
-   git checkout -b feature/nueva-funcionalidad
-   ```
-3. ✍️ Realiza tus cambios
-4. 📤 Push a la rama
-   ```bash
-   git commit -m "✨ Añadir: nueva funcionalidad"
-   git push origin feature/nueva-funcionalidad
-   ```
-5. 🔄 Abre un Pull Request
+## 🔗 Enlaces Importantes
 
-## 📜 Licencia
+- [💻 Aplicación en Vivo](https://qoriyachay.netlify.app)
+- [📚 Repositorio Backend](https://github.com/AnthonyGit1/qoriyachay-backend)
+- [📄 Documento Técnico](/docs/Documentación-Qoriyachay-Seedminds.pdf)
+- [🎥 Video de Presentación](https://www.youtube.com/watch?v=YSgRLvUidW8)
+- [🎬 Video Demo](https://youtu.be/Ja1wSVNb9h8)
 
-Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
-
-## 📞 Contacto
+## 👥 Equipo SeedMinds
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contacto@seedminds.com)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/qoriyachay)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/company/qoriyachay)
+| <img src="https://i.ibb.co/1qQtV9j/anthony-1.jpg" width="150" height="150" style="border-radius: 50%"> | <img src="https://i.ibb.co/c2xQxg7/img.png" width="150" height="150" style="border-radius: 50%"> | <img src="https://i.ibb.co/f9ZMQwm/joshhh2.jpg" width="150" height="150" style="border-radius: 50%"> |
+|:---:|:---:|:---:|
+| **Anthony Rosas** | **Jaci Lucas** | **Joshelyn Riveros** |
+| Backend Dev | Frontend Dev | UX and QA |
 
 </div>
 
-## 📚 Recursos Adicionales
-
-- 📖 [Documentación](https://docs.qoriyachay.com)
-- 🐛 [Reportar Problemas](https://github.com/seedminds/qoriyachay/issues)
-- 💬 [Foro de Discusión](https://github.com/seedminds/qoriyachay/discussions)
-- 🎥 [Video Tutorial](https://youtube.com/qoriyachay)
-
 ---
-
 <div align="center">
 
-Hecho con ❤️ por [SeedMinds](https://seedminds.com)
+Desarrollado con ❤️ por el equipo Qoriyachay
 
 </div>

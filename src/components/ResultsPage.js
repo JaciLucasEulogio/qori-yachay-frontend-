@@ -47,7 +47,7 @@ const ResultsPage = () => {
 
   useEffect(() => {
     if (learningPath) {
-      localStorage.setItem('learningPath', JSON.stringify(learningPath));
+      //localStorage.setItem('learningPath', JSON.stringify(learningPath));
     }
   }, [learningPath]);
 
